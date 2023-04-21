@@ -1,62 +1,18 @@
-import logo from './logo.svg';
-import "@aws-amplify/ui-react/styles.css";
-import './App.css';
-import {
-  withAuthenticator,
-  Button,
-  Heading,
-  Image,
-  View,
-  Card,
-} from "@aws-amplify/ui-react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Home from "./components/Home"
+import SignIn from "./components/SignIn"
+import SignUp from "./components/SignUp"
 
-
-function App({ signOut }) {
+function App() {
   return (
-    <View className="App">
-      <Card>
-        <Image src={logo} className="App-logo" alt="logo" />
-        <Heading level={1}>We now have Auth!</Heading>
-      </Card>
-      <Button onClick={signOut}>Sign Out</Button>
-    </View>
+    <Router>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignIn/>} />
+        <Route path="/signup" element={<SignUp />} />
+        </Routes>
+    </Router>
   );
 }
 
-function Profile({ signOut }) {
-  return (
-    <View className="App">
-      <Card>
-        <Heading level={1}>Enter Additional Details</Heading>
-      </Card>
-      <Button onClick={signOut}>Sign Out</Button>
-    </View>
-  );
-}
-
-{/*function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Travel Companion</h1>
-        {/*<img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-  </a>
-      </header>
-    </div>
-  );
-}/*/}
-
-
-export default withAuthenticator(Profile);
-
-//export default App;
+export default App
