@@ -1,10 +1,20 @@
 import "./styles.css";
 import Navbar from './Navbar';
 import {
-  Link
+  Link,
 } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import API from "./API";
+
 
 function SignUp() {
+  
+
+  function App(){
+
+     fetch('http://localhost:8585/ReadBook/101')
+   
+  }
 
   const signUpForm = (
     <div className="form">
@@ -21,14 +31,13 @@ function SignUp() {
           <input type="password" placeholder="Confirm Password" autocomplete="new-password" required />
         </div>
         <div className="button-container">
-          <input type="submit" value="Sign Up"/>
+          <input type="submit" value="Sign Up" onClick={App}></input>
         </div>
         <div className="signup">
           <br/><br/>
           <label>Already Have An Account? </label>
           <Link to="/signin"><label className="sign-up-label">Sign In</label></Link>
         </div>
-
     </div>
   );
   return (
