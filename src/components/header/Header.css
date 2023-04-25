@@ -1,0 +1,14 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: white;
+  }
+
+  .link{
+   text-decoration: none;
+  }
+

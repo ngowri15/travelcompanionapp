@@ -48,6 +48,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .upload-button-container{
+    background: wheat;
+  }
   
   .sign-in-form,
   .sign-up-form{
@@ -75,4 +79,5 @@
     color:#511E00;
   }
 
+ 
  

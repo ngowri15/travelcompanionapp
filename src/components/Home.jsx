@@ -1,18 +1,19 @@
-import {
-    Link
-} from "react-router-dom";
-import Navbar from './Navbar';
+
 import "./styles.css"
+import Header from "./header/Header"
+import Content from "./content/Content";
+import Footer from "./foot/Footer"
 
 function Home() {
 
     return (       
-        <>
-            <Navbar />
-			<div className="button-container">
-			<Link to="/SignIn"><input type="submit" value="Sign In"/></Link>
-        	</div>
-		</> 
+       <div className="home">
+		
+			<Header />	
+			<Content />
+			<Footer />
+			
+		</div>
 	)
 }
 export default Home;
