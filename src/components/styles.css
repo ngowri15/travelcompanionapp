@@ -8,13 +8,15 @@
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    height: 70vh;
+    height: 120vh;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     background-color: #FFF7F2;
   }
   
   input[type="text"],
-  input[type="password"] {
+  input[type="password"], 
+  input[type="email"],
+  input[type="tel"]{
     height: 25px;
     width: 300px;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -44,17 +46,14 @@
     cursor: pointer;
   }
   
-  .button-container {
-    display: flex;
-    justify-content: center;
-  }
-
   .upload-button-container{
     background: wheat;
   }
   
   .sign-in-form,
   .sign-up-form{
+    position: absolute;
+    top: 30%;
     background-color: white;
     padding: 3rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -77,6 +76,22 @@
     gap: 8px;
     margin: 10px;
     color:#511E00;
+  }
+
+  .pass-wrapper {
+    position: relative;
+    display: flex;
+    margin-bottom: 14px;
+  }
+  
+  i {
+    position: absolute;
+    top: 43%;
+    right: 16%;
+  }
+  i:hover {
+    color: #00fcb6;
+    cursor: pointer;
   }
 
  

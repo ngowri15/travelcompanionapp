@@ -1,10 +1,24 @@
 .footer {
     position: absolute;
-    top: 600;
     bottom: 0px;
     left: 0;
     width: 100%;
     text-align: center;
     color: white;
+    gap: 20px;
   }
+  .about-us{
+    position: absolute;
+    align-content: center;
+    cursor: pointer;
+    padding: 7px 1px;
+  }
+
+  .contact{
+    position: absolute;
+    cursor: pointer;
+    padding: 7px 90px;
+  }
+
+  
   
