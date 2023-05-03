@@ -1,10 +1,9 @@
 import "./Content.css";
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import AllJourneys from "./AllJourneys"
 import Content1 from "./Content.png"
 import { TextField, Box } from "@mui/material";
-
-
+import { View, Button } from "react-native-web";
 
 function Content() {
 
@@ -29,67 +28,65 @@ function Content() {
     console.log(journeyDate);
   }
 
-  const useStyles = makeStyles({
-    root: {
-      '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
-        borderWidth: '2px',
-        borderColor: '#6b6b6b',
-      },
-      '& .MuiOutlinedInput-input': {
-        padding: '10px',
-      },
-    },
-  });
-  
-  function MyTextField() {
-    const classes = useStyles();
+  async function filterJouneys(event) {
+    event.preventDefault();
+    const form = new FormData(event.target);
+    const image = form.get("image");
+    const data = {
+      name: form.get("name"),
+      description: form.get("description"),
+      image: image.name,
+    };
+    if (!!data.image) await Storage.put(data.name, image);
+
+    event.target.reset();
+  }
 
   return (
+
     <div className="content">
-        <img alt=""
-          src={Content1}
-          width="1200"
-          height="500"
-        />
-        <form onSubmit={filterJourneys}>
-          <div className="search">
-        <Box width={170}>
-        <TextField label="Flyring From" fullWidth />
-        <TextField
-      label="My Text Field"
-      variant="outlined"
-      className={classes.root}
-    />
-      </Box>
-      </div>
-        
+      <br /><br />
+      <img alt=""
+        src={Content1}
+        width="1000"
+        height="350"
+      />
+      <br /><br /><br /><br />
+
+      <form onSubmit={filterJourneys}>
+        <div className="search">
+
+        </div>
+
         <div className="content-filter">
-          <label className="label-journeys">Filter your Journey </label>
+          <label className="label-journeys">Filter your Journey </label>&nbsp;&nbsp;&nbsp;
           <select value={fromCountry} onChange={handleFromCountry}>
             <option value="">From Country</option>
+            <option value="Heathrow">Heathrow</option>
+            <option value="Manali">Manali</option>
             <option value="UK">UK</option>
             <option value="Germany">Germany</option>
             <option value="India">India</option>
             <option value="France">France</option>
             <option value="USA">USA</option>
             <option value="Italy">Italy</option>
-          </select>
+          </select>&nbsp;&nbsp;&nbsp;
           <select value={toCountry} onChange={handleToCountry}>
             <option value="">To Country</option>
+            <option value="Heathrow">Heathrow</option>
+            <option value="Manali">Manali</option>
             <option value="UK">UK</option>
             <option value="Germany">Germany</option>
             <option value="India">India</option>
             <option value="France">France</option>
             <option value="USA">USA</option>
             <option value="Italy">Italy</option>
-          </select>
-          <input type="date" value={journeyDate} onChange={handleJourneyDate}  />
-          <button type="submit">Submit</button>
-          </div>
-          </form>
-          
-          <button type="submit">List All Journeys</button>
-        <h2 className="header-journeys">Filtered Journeys</h2>
+          </select>&nbsp;&nbsp;&nbsp;
+          <input type="date" value={journeyDate} onChange={handleJourneyDate} />&nbsp;&nbsp;&nbsp;
+          <button type="submit" className="filter-submit">Submit</button>
+        </div>
+      </form>
+
       <AllJourneys />
     </div>
   );

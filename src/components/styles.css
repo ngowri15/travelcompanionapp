@@ -53,10 +53,11 @@
     display: flex;
   }
   
-  .title {
+  .sign-up-text,
+  .sign-in-text {
     font-size: 25px;
     margin-bottom: 20px;
-    color: #511E00
+    color: #3D9DDB
   }
   
   .input-container {
@@ -96,5 +97,7 @@
       border-radius:10px;
     
   }
+
+ 
  
  

@@ -12,7 +12,7 @@
   }
 
   .header-journeys{
-    color: #eb601f;
+    color: #3D9DDB;
   }
 
   .header-filtered-journeys{
@@ -20,13 +20,14 @@
   }
 
   .label-journeys{
-    color: #6a2305;
+    color: #063460;
   }
   .content-filter{
     padding-top: 3%;
   }
   .table-journeys{
     text-align: center;
+    color:#70aee7 ;
   }
 
   .search{
@@ -34,6 +35,31 @@
   flex-direction: row;
   }
 
+  .filter-submit {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #3D9DDB;
+    border: 1px solid #9ecde3;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius:10px;
+  }
+
+  .table-journeys{
+    border: 1px solid #9ecde3;
+  }
+
+  .thead{
+    color: #063460;
+    border: 1px solid #9ecde3;
+  }
+
+  .tr{
+    border: 1px solid #9ecde3;
+  }
+
+  
 
 
  

@@ -55,7 +55,7 @@ const SignIn = () => {
       <Link to="/"><Navbar /></Link>
       <div className="app">
         <div className="sign-in-form">
-          <div className="sign-in-label">Sign In</div>
+          <div className="sign-in-text">Sign In</div>
           <form onSubmit={onSubmit} >
             <div className="form">
               <div className="input-container">

@@ -41,7 +41,7 @@ const SignUp = () => {
       <Link to="/"><Navbar /></Link>
       <div className="app">
         <div className="sign-up-form">
-          <div className="title">Sign Up</div>
+          <div className="sign-up-text">Sign Up</div>
           <form method="POST" onSubmit={handleSignUp} >
             <div className="form">
 

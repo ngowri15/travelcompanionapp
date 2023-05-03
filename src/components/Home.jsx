@@ -11,7 +11,7 @@ function Home() {
 		
 			<Header />	
 			<Content />
-			<Footer />
+			{/*<Footer />*/}
 			
 		</div>
 	)

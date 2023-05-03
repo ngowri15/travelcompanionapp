@@ -23,11 +23,11 @@ class AllJourneys extends React.Component {
     return ( <div>
           <h2 className="header-journeys">List of all Journeys</h2>
           <table className="table-journeys">
-            <thead>
-              <tr>
-                <td>From</td>
-                <td>To</td>
-                <td>Date</td>
+            <thead className="thead">
+              <tr className="tr">
+              &nbsp;&nbsp;&nbsp;<td>From</td>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<td>To</td>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<td>Date</td>&nbsp;&nbsp;&nbsp;
               </tr>
             </thead>
             <tbody>
@@ -35,12 +35,11 @@ class AllJourneys extends React.Component {
                 this.state.journeys.map(
                   journeys =>
                     <tr key={journeys.id}>
-                      <td>{journeys.journeyFrom}</td>
-                      <td>{journeys.journeyTo}</td>
-                      <td>{journeys.journeyDate}</td>
+                       &nbsp;&nbsp;&nbsp;<td>{journeys.journeyFrom}</td> &nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;<td>{journeys.journeyTo}</td> &nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;<td>{journeys.journeyDate}</td> &nbsp;&nbsp;&nbsp;
                     </tr>
-                )
-                
+                )                
               }
             </tbody>
           </table>
