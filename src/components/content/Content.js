@@ -1,6 +1,10 @@
 import "./Content.css";
 import React,{useState} from 'react';
 import AllJourneys from "./AllJourneys"
+import Content1 from "./Content.png"
+import { TextField, Box } from "@mui/material";
+
+
 
 function Content() {
 
@@ -25,10 +29,40 @@ function Content() {
     console.log(journeyDate);
   }
 
+  const useStyles = makeStyles({
+    root: {
+      '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+        borderWidth: '2px',
+        borderColor: '#6b6b6b',
+      },
+      '& .MuiOutlinedInput-input': {
+        padding: '10px',
+      },
+    },
+  });
+  
+  function MyTextField() {
+    const classes = useStyles();
+
   return (
     <div className="content">
-        
+        <img alt=""
+          src={Content1}
+          width="1200"
+          height="500"
+        />
         <form onSubmit={filterJourneys}>
+          <div className="search">
+        <Box width={170}>
+        <TextField label="Flyring From" fullWidth />
+        <TextField
+      label="My Text Field"
+      variant="outlined"
+      className={classes.root}
+    />
+      </Box>
+      </div>
+        
         <div className="content-filter">
           <label className="label-journeys">Filter your Journey </label>
           <select value={fromCountry} onChange={handleFromCountry}>

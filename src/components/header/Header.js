@@ -9,16 +9,22 @@ import {
 export default function Header() {
   return (
     <>
-        <div className="header">
-          <img alt=""
-            src={Logo}
-            width="375"
-            height="160"
-          /><br/>
-          <Link to="/signin"><input type="submit" className="signinbutton" value="Sign In" /></Link>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link to="/signup"><input type="submit" className="signupbutton" value="Sign Up" /></Link>
-        </div>
+      <div className="header">
+        <img alt=""
+          src={Logo}
+          width="250"
+          height="110"
+        />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Link to="/createatrip" className="create-a-trip-link"><label className="create-a-trip-label">Create a Trip</label></Link>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Link to="/companionsearch" className="companion-search-link"><label className="companion-search-label">Companion Search</label></Link>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <Link to="/signin"><input type="submit" className="login-button" value="LOGIN" /></Link>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
     </>
   );
 }

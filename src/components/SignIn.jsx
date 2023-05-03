@@ -55,7 +55,7 @@ const SignIn = () => {
       <Link to="/"><Navbar /></Link>
       <div className="app">
         <div className="sign-in-form">
-          <div className="title">Sign In</div>
+          <div className="sign-in-label">Sign In</div>
           <form onSubmit={onSubmit} >
             <div className="form">
               <div className="input-container">
@@ -64,8 +64,8 @@ const SignIn = () => {
               <div className="input-container">
                 <input value={password} onChange={(event) => setPassword(event.target.value)} type="password" placeholder="Password" autoComplete="new-password" required />
               </div>
-              <div className="button-container">
-                <input type="submit" value="Sign In" />
+              <div className="">
+                <input className="sign-in-button" type="submit" value="Sign In" />
               </div>
               <div className="signup">
                 <br /><br />

@@ -5,12 +5,11 @@
     font-family: sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     gap: 20px;
     height: 120vh;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-color: #FFF7F2;
+    background-color: #FFFFFF;
   }
   
   input[type="text"],
@@ -26,19 +25,9 @@
     font-size: medium;
   }
   
-  input[type="submit"] {
-    margin-top: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    background: #DD571C;
-    border: 1px solid #EC9706;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    border-radius:10px;
-  }
   
   input[type="submit"]:hover {
-    background: #FF781F;
+    background: #59abdb;
   }
 
   .sign-up-label,
@@ -75,7 +64,7 @@
     flex-direction: column;
     gap: 8px;
     margin: 10px;
-    color:#511E00;
+    color:#144b72;
   }
 
   .pass-wrapper {
@@ -86,13 +75,26 @@
   
   i {
     position: absolute;
-    top: 43%;
+    top: 40%;
     right: 16%;
   }
   i:hover {
-    color: #00fcb6;
+    color: #6d6f6e;
     cursor: pointer;
   }
 
+  .sign-in-button,
+  .sign-up-button{
+    
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      background: #3D9DDB;
+      border: 1px solid #9ecde3;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius:10px;
+    
+  }
  
  

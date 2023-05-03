@@ -5,7 +5,33 @@
     text-align: center;
     background-color: #FFFFFF;
     color: white;
+    align-items: center;
+    flex-direction: column;
   }
+  .create-a-trip-link,
+  .companion-search-link{
+    text-decoration: none;
+    color: #3D9DDB;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .create-a-trip-label,
+  .companion-search-label{
+    cursor: pointer;
+  }
+
+  .login-button {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #3D9DDB;
+    border: 1px solid #9ecde3;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius:10px;
+  }
+
 
  
 
